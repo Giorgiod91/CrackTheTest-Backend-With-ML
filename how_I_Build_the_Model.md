@@ -28,3 +28,7 @@
 7. Setup Trainer
 
 8. Create my train dataset
+
+- with https://huggingface.co/docs/datasets/about_dataset_features
+- and https://huggingface.co/docs/datasets/create_dataset#from-python-dictionaries
+- so with python dictionaries
