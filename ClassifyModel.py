@@ -64,7 +64,7 @@ training_args = TrainingArguments(
 
 
 )
-
+#::TODO:: create a working train dataset
 # this step here i had create a dataset myown sonce i dont use created one  for the train_dataset= argument
 # source here i used is this https://huggingface.co/docs/datasets/about_dataset_features
 # and this https://huggingface.co/docs/datasets/create_dataset#from-python-dictionaries
