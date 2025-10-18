@@ -66,13 +66,14 @@ training_args = TrainingArguments(
 )
 
 # this step here i had create a dataset myown sonce i dont use created one  for the train_dataset= argument
-
+# source here i used is this https://huggingface.co/docs/datasets/create_dataset
+# and this https://huggingface.co/docs/datasets/about_dataset_features
 
 
 
 # Setup Trainer
 # for reference and learning i used this and the secdion is 6.4 Setting up and instance of Trainer
-# https://www.learnhuggingface.com/notebooks/hugging_face_text_classification_tutorial?utm_source=chatgpt.com#setting-up-a-model-for-training
+# https://www.learnhuggingface.com/notebooks/hugging_face_text_classification_tutorial
 
 trainer = Trainer(
     model=model,
