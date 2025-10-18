@@ -19,3 +19,12 @@
 3. Choose a pretrained Language model
 
 - https://huggingface.co/dbmdz/bert-base-german-cased
+
+4. Tokenize
+
+5. Setup a model for fine tuning
+
+6. Define and setup training args
+7. Setup Trainer
+
+8. Create my train dataset
