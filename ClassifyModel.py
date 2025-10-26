@@ -117,12 +117,28 @@ tokenized_input_from_user = tokenizer(input_from_user, return_tensors="pt")
 model.eval()
 
 
+
+#  we need id first before the label so we switch the dict v comes k
+convert_labe_to_numbers_id_first ={}
+for k,v in convert_labe_to_numbers.items():
+    convert_labe_to_numbers_id_first[v] = k
+
+
+
 with torch.no_grad():
     # use the model on the tokenized input  it gives back raw logits before the softmax
     output = model(**tokenized_input_from_user)
     # now applying softmax that converst logits into probabilites 
     probabilities = softmax(output.logits, dim=-1)
+    # finds the index from the biggest value 
+    predicted_class_id = torch.argmax(probabilities)
 
+
+# converts back to Leicht , Mittel , Schwer
+print("Predicted class:", convert_labe_to_numbers_id_first[int(predicted_class_id)])
+
+# converts tensor into lists
+print("Probabilities:", probabilities.tolist())
 
 
 
