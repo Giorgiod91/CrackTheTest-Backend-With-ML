@@ -83,3 +83,7 @@ trainer = Trainer(
 
 )
 
+
+# softmax since its 3 labels for 2 i would use sigmoid
+
+
