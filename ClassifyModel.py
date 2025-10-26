@@ -6,7 +6,7 @@ from torch.nn.functional import softmax
 
 from transformers import AutoModel, AutoTokenizer, AutoModelForSequenceClassification,TrainingArguments, Trainer
 
-
+#:TODO: add more DATA 
 data = [
     # Leicht
     {"question": "Was ist 2 + 2?", "label": "Leicht"},
