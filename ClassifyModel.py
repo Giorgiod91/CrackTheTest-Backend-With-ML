@@ -61,9 +61,10 @@ training_args = TrainingArguments(
     learning_rate=5e-5,  # picked the default value
     per_device_train_batch_size=8,  # found this as a default value aswell
     num_train_epochs=3, # in the documention was this also flagged with 3 as default
-    eval_strategy="epos",  # evaluates end the end of each epos 
+    eval_strategy="no",  # evaluates end the end of each epoch
     save_strategy="no",  # no auto safe here i just manually safe it at the end
     logging_strategy="epoch"  # since i have a small dataset i can log and track loss after each epoch
+    
 
 
 
