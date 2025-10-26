@@ -1,5 +1,9 @@
 
 import numpy as np
+from datasets import Dataset
+import torch
+from torch.nn.functional import softmax
+
 from transformers import AutoModel, AutoTokenizer, AutoModelForSequenceClassification,TrainingArguments, Trainer
 
 
@@ -70,6 +74,20 @@ training_args = TrainingArguments(
 # and this https://huggingface.co/docs/datasets/create_dataset#from-python-dictionaries
 
 
+# softmax since its 3 labels for 2 i would use sigmoid
+
+
+# making dataset out of the lists
+dataset = Dataset.from_dict({
+    "text": texts,
+    "labels": labels
+})
+
+# Tokenizer amnwenden
+
+tokenized_dataset = dataset.map(lambda x: tokenizer(x["text"], truncation=True, padding=True), batched=True)
+
+
 
 # Setup Trainer
 # for reference and learning i used this and the secdion is 6.4 Setting up and instance of Trainer
@@ -78,12 +96,34 @@ training_args = TrainingArguments(
 trainer = Trainer(
     model=model,
     args=training_args,
-    train_dataset=
+    train_dataset=tokenized_dataset
 
 
 )
 
+# training starten
+trainer.train()
 
-# softmax since its 3 labels for 2 i would use sigmoid
+# input to test the model
+
+input_from_user = input("Frage stellen")
+# tokenizen
+tokenized_input_from_user = tokenizer(input_from_user, return_tensors="pt")
+
+
+# code snippet i found online that i will learn about this is why i comment those lines now
+
+# switch Model mode to predict and not training
+model.eval()
+
+
+with torch.no_grad():
+    # use the model on the tokenized input  it gives back raw logits before the softmax
+    output = model(**tokenized_input_from_user)
+    # now applying softmax that converst logits into probabilites 
+    probabilities = softmax(output.logits, dim=-1)
+
+
+
 
 
