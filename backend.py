@@ -12,6 +12,9 @@ app = FastAPI()
 class User(BaseModel):
     email: str
 
+class input(BaseModel):
+    text: str
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Frontend-URL
@@ -37,3 +40,14 @@ def add_user(user: User):
     result = supabase.table("Users").insert({"email_adress":user.email}).execute()
 
     return {"data": result.data}
+
+# another route here for my ML model
+@app.post("/predict-difficulty")
+    def predicted_difficulty(data: input):
+    user_input = data.text
+    predicted_difficulty = My_Model.predict()
+
+    return {"predicted difficulty with machnine learning Model": predicted_difficulty}
+    
+
+
