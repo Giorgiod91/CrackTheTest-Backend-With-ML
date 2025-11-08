@@ -1,34 +1,8 @@
-# using the Source learnhugginface.com
+# Implemted what i learned from Andrew NG Courses
 
-# Installing all needed dependencies
-
--pip install transformers
--pip install datasets
--pip install evaluate
--pip install accelerate
--pip install gradio
-
-1. Dataset
-
-- since i couldnt really find a matching one i just build my own with difficulty labels
-
-2. Prepare Data
-
-- convert label words into number ( Leicht : 1 )
-
-3. Choose a pretrained Language model
-
-- https://huggingface.co/dbmdz/bert-base-german-cased
-
-4. Tokenize
-
-5. Setup a model for fine tuning
-
-6. Define and setup training args
-7. Setup Trainer
-
-8. Create my train dataset
-
-- with https://huggingface.co/docs/datasets/about_dataset_features
-- and https://huggingface.co/docs/datasets/create_dataset#from-python-dictionaries
-- so with python dictionaries
+1. i picked logistic regression with gradient descent
+2. Instead of implement the pretrained models i hardcoded like i had to learn in the courses, this helps to understand the core concepts and why and what to use
+3. But how it works is basically 1. go forward throug the model then compute the cost so check
+   how wrong the prediction are, and then we go backwards and adjust the weights to reduce the cost
+   that happens in my propagate function
+4.

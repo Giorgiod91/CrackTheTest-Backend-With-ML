@@ -43,7 +43,7 @@ def add_user(user: User):
 
 # another route here for my ML model
 @app.post("/predict-difficulty")
-    def predicted_difficulty(data: input):
+def predict(data: input):
     user_input = data.text
     predicted_difficulty = My_Model.predict()
 
