@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
+from fastapi import FastAPI, Body
+from fastapi.middleware.cors import CORSMiddleware
 
 
 data = [
@@ -228,4 +230,24 @@ plt.title("Training cost")
 plt.xlabel("Iterations (x100)")
 plt.ylabel("Cost")
 plt.show()
+
+
+# need to safe the Model somehow to reuse it in the backend part with the frontend input data
+# for now trying to build an API right here
+# another route here for my ML model
+app = FastAPI()
+
+#:TODO: fix the Routi9ng with middleware and cors and so on als helper function sigmoid needs to be inside that post 
+
+@app.post("/predict-difficulty")
+def predict(data: input,w,b):
+    user_input = data.text
+    # need to  Vectorize the input 
+    vectorized_user_input= vectorizer.transform(user_input).toarray().T
+    predicted_difficulty = predict(w,b,vectorized_user_input)
+
+    return {"predicted difficulty with machnine learning Model": predicted_difficulty}
+    
+
+
 
