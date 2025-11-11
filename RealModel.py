@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from fastapi import FastAPI, Body
 from fastapi.middleware.cors import CORSMiddleware
-
+from pydantic import BaseModel
 
 data = [
     # ---------------- Leicht (30) ----------------
@@ -237,17 +237,42 @@ plt.show()
 # another route here for my ML model
 app = FastAPI()
 
-#:TODO: fix the Routi9ng with middleware and cors and so on als helper function sigmoid needs to be inside that post 
+#:TODO: fix the Routi9ng with middleware and cors and so on 
+
+
+
+# BaseModel for uner input 
+
+class User_Input(BaseModel):
+    test:str
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Frontend-URL
+    allow_credentials=True,
+    allow_methods=["*"],   # erlaubt GET, POST, PUT, DELETE usw.
+    allow_headers=["*"],   # erlaubt alle Header
+)
+
+# predited outcome label we send back to the frontend
+model_label = {0:"Leicht", 1: "Schwer"}
 
 @app.post("/predict-difficulty")
-def predict(data: input,w,b):
-    user_input = data.text
+def predict_user_input(data: input,w,b):
+    user_input = data.text 
+
+
     # need to  Vectorize the input 
     vectorized_user_input= vectorizer.transform(user_input).toarray().T
     predicted_difficulty = predict(w,b,vectorized_user_input)
+    # taking this from above
+    for q, pred in zip(questions_to_predict, predicts.flatten()):
+        if pred == 0:
+            print(q, "Leicht")
+    else:
+        print(q, "Schwer")
 
     return {"predicted difficulty with machnine learning Model": predicted_difficulty}
     
-
 
 
