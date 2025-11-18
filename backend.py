@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, Body
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from werkzeug.security import generate_password_hash ,check_password_hash
 
 
 load_dotenv()
@@ -48,6 +49,19 @@ def predict(data: input):
     predicted_difficulty = My_Model.predict()
 
     return {"predicted difficulty with machnine learning Model": predicted_difficulty}
+
+
+# hash user password with data (user_input_pw) from the frontend validation check will be in the frontend
+def create_hash_pw(user_input_pw):
+    hashed_pw = generate_password_hash(user_input_pw)
+
+    return hashed_pw
+
+# hased_pw with the right user push into the DB
+
+def push_hashed_pw(hashed_pw):
+ #::TODO:: add the logic here and connect supabase db    
+
     
 
 
