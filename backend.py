@@ -23,6 +23,8 @@ Class SupaUser(db.Model):
 
 https://www.youtube.com/watch?v=fsNeGqxC4PM   reference
 
+
+
 class User(BaseModel):
     email: str
 
