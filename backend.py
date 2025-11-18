@@ -17,8 +17,10 @@ db = SQLAlchemy
 db.init_app(app)
 
 Class SupaUser(db.Model):
-    id = -...............
-    email = 
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(120), index=True, unique=True)
+    password_hash = db.Column(db.String(128))
+    joined_at = db.Column(db.DateTime(), index=True, default=datetime.utcnow)
     
 
 https://www.youtube.com/watch?v=fsNeGqxC4PM   reference
