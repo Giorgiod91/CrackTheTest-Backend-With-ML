@@ -18,8 +18,10 @@ db.init_app(app)
 
 Class SupaUser(db.Model):
     id = -...............
+    email = 
+    
 
-
+https://www.youtube.com/watch?v=fsNeGqxC4PM   reference
 
 class User(BaseModel):
     email: str
