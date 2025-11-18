@@ -5,10 +5,21 @@ from fastapi import FastAPI, Body
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from werkzeug.security import generate_password_hash ,check_password_hash
+from flask_sqlalchemy import SQLAlchemy
 
 
 load_dotenv()
 app = FastAPI()
+
+#creating db intance
+db = SQLAlchemy
+
+db.init_app(app)
+
+Class SupaUser(db.Model):
+    id = -...............
+
+
 
 class User(BaseModel):
     email: str
