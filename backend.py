@@ -62,7 +62,8 @@ def add_user(user: User):
 
 @app.route('/premium')
 def premium_users():
-    return "Welcome to the Premium Section!"
+    myChannel = "" ## my youtube channel later
+    return "Welcome to the Premium Section! <a href="https://youtube.com${myChannel}"> Show Video Guide  <a/>"
 # another route here for my ML model
 @app.post("/predict-difficulty")
 def predict(data: input):
