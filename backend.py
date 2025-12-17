@@ -58,7 +58,11 @@ def add_user(user: User):
     result = supabase.table("Users").insert({"email_adress":user.email}).execute()
 
     return {"data": result.data}
+# want a route now for the premium users
 
+@app.route('/premium')
+def premium_users():
+    return "Welcome to the Premium Section!"
 # another route here for my ML model
 @app.post("/predict-difficulty")
 def predict(data: input):
