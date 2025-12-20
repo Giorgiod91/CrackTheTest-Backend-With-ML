@@ -5,25 +5,16 @@ from fastapi import FastAPI, Body
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from werkzeug.security import generate_password_hash ,check_password_hash
-from flask_sqlalchemy import SQLAlchemy
 
 
 load_dotenv()
 app = FastAPI()
 
 #creating db intance
-db = SQLAlchemy
 
-db.init_app(app)
+#https://www.youtube.com/watch?v=fsNeGqxC4PM   reference
 
-Class SupaUser(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(120), index=True, unique=True)
-    password_hash = db.Column(db.String(128))
-    joined_at = db.Column(db.DateTime(), index=True, default=datetime.utcnow)
-    
-
-https://www.youtube.com/watch?v=fsNeGqxC4PM   reference
+# i allways forget how to start the server   ::TODO:  uvicorn backend:app --reload
 
 
 
@@ -58,12 +49,31 @@ def add_user(user: User):
     result = supabase.table("Users").insert({"email_adress":user.email}).execute()
 
     return {"data": result.data}
+
+#fetch the premium users data
+
+@app.get("/display_data/{user_id}")
+def get_data(user_id: int):
+
+    # check if users exists
+    user = supabase.table("Users").select("id").eq("authorid", user_id).execute()
+    if not user.data:
+        return {"error": "User not found"}
+
+    # fetch premium content for dashboard
+    content = supabase.table("Test").select("title, content").eq(
+        "user_id", user_id
+    ).execute()
+
+    return content.data
+
+
 # want a route now for the premium users
 
-@app.route('/premium')
+@app.get('/premium')
 def premium_users():
     myChannel = "" ## my youtube channel later
-    return "Welcome to the Premium Section! <a href="https://youtube.com${myChannel}"> Show Video Guide  <a/>"
+    return f'Welcome to the Premium Section! <a href="https://youtube.com{myChannel}"> Show Video Guide </a>'
 # another route here for my ML model
 @app.post("/predict-difficulty")
 def predict(data: input):
@@ -81,7 +91,7 @@ def create_hash_pw(user_input_pw):
 
 # hased_pw with the right user push into the DB
 
-def push_hashed_pw(hashed_pw):
+#def push_hashed_pw(hashed_pw):
  #::TODO:: add the logic here and connect supabase db    
 
     
