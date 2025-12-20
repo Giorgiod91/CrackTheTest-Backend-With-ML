@@ -6,9 +6,19 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from werkzeug.security import generate_password_hash ,check_password_hash
 
+from openai import OpenAI
+
+
+
+
 
 load_dotenv()
 app = FastAPI()
+
+
+
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+print(os.environ.get("OPENAI_API_KEY"))
 
 #creating db intance
 
@@ -18,11 +28,22 @@ app = FastAPI()
 
 
 
+
 class User(BaseModel):
     email: str
 
 class input(BaseModel):
     text: str
+    title: str
+    subject: str
+    content: str
+
+class Tests(BaseModel):
+    user_id: int 
+    title: str
+    subject: str
+    content: str
+    
 
 app.add_middleware(
     CORSMiddleware,
@@ -40,33 +61,29 @@ supabase: Client = create_client(url,service_role_key)
 # Function here to add a user to the DB with supabase and return data
 def add_user(user: User):
 
-    existing = supabase.table("Users").select("*").eq("email_adress", user.email).execute()
-    if existing.data and len(existing.data) > 0:
-        return {"data": None, "error": "Email already exists"}
+    email_address = "first_user@lol.com"
+    username = "admin1"
 
 
   
-    result = supabase.table("Users").insert({"email_adress":user.email}).execute()
+    result = supabase.table("users").insert({"email":email_address, "username":username}).execute()
 
     return {"data": result.data}
 
 #fetch the premium users data
-
 @app.get("/display_data/{user_id}")
 def get_data(user_id: int):
+    # check if user exists
+    user_response = supabase.table("users").select("id").eq("id", user_id).execute()
+    print("User query:", user_response.data)
 
-    # check if users exists
-    user = supabase.table("Users").select("id").eq("authorid", user_id).execute()
-    if not user.data:
+    if not user_response.data:
         return {"error": "User not found"}
 
     # fetch premium content for dashboard
-    content = supabase.table("Test").select("title, content").eq(
-        "user_id", user_id
-    ).execute()
+    content_response = supabase.table("tests").select("title, content").eq("authorid", user_id).execute()
 
-    return content.data
-
+    return content_response.data
 
 # want a route now for the premium users
 
@@ -89,11 +106,35 @@ def create_hash_pw(user_input_pw):
 
     return hashed_pw
 
+
+
+
 # hased_pw with the right user push into the DB
 
 #def push_hashed_pw(hashed_pw):
  #::TODO:: add the logic here and connect supabase db    
 
+
+
+
+# Routing to create tests with the open ai API
+# i make sure to check if the user has premium status
+@app.post('/create_test')
+def create_test(data:Tests):
+    def is_user_premium():
+        premium = supabase.table("users").select("premium").eq("id", data.user_id).execute()
+        if not premium.data or not premium.data[0]["premium"]:
+            return {"error": "User is not Premium"}     
+        else:
+              
+             response = client.responses.create(
+             model="gpt-3.5-turbo",
+             input=f"Write a authentic test for this topic={data.title} and the test should include={data.content} withing this subject={data.subject}")
+             supabase.table("tests").insert({"title": data.title, "subject": data.subject,"content":response.output_text}).execute()
+       
+
+        return response.output_text
+            
+    return is_user_premium() 
+        
     
-
-
