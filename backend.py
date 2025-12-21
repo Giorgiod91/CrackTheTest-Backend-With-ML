@@ -81,7 +81,7 @@ def get_data(user_id: int):
         return {"error": "User not found"}
 
     # fetch premium content for dashboard
-    content_response = supabase.table("tests").select("title, content").eq("authorid", user_id).execute()
+    content_response = supabase.table("tests").select("title, content,id, created_at").eq("authorid", user_id).execute()
 
     return content_response.data
 
@@ -138,3 +138,21 @@ def create_test(data:Tests):
     return is_user_premium() 
         
     
+# create a route to upadate a test
+@app.put('/update_test/{test_id}')
+def update_test(test_id: int, data: Tests):
+    response = supabase.table("tests").update({
+        "title": data.title,
+        "subject": data.subject,
+        "content": data.content
+    }).eq("id", test_id).execute()
+
+    return {"data": response.data}
+
+
+# and a route to delete a test
+@app.delete('/delete_test/{test_id}')
+def delete_test(test_id: int):
+    response = supabase.table("tests").delete().eq("id", test_id).execute()
+
+    return {"data": response.data}
