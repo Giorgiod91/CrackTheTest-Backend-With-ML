@@ -275,4 +275,43 @@ def predict_user_input(data: input,w,b):
     return {"predicted difficulty with machnine learning Model": predicted_difficulty}
     
 
+# route to get user input and check for banned wwords and to use the data for my model to learn from it
+@app.get("/send-user-input")
+def get_user_input(input: str):
+    user_input = []
+    banned_words = [
+  # SQL Injection
+  "select", "insert", "update", "delete", "drop", "truncate",
+  "union", "where", "having", "order by", "group by",
+  "or 1=1", "and 1=1", "--", ";--", "/*", "*/", "@@",
+  "char(", "nchar(", "varchar(", "nvarchar(",
+  "cast(", "convert(", "exec", "execute",
+  "information_schema", "table_name", "column_name",
+  "xp_cmdshell", "sp_executesql",
 
+  # XSS (Cross-Site Scripting)
+  "<script", "</script>", "javascript:",
+  "onerror=", "onload=", "onclick=",
+  "alert(", "prompt(", "confirm(",
+  "document.cookie", "document.write",
+  "<iframe", "<img", "<svg",
+
+  # Command Injection
+  "&&", "||", "|", "`", "$(",
+  "cmd.exe", "powershell", "bash", "sh",
+  "wget", "curl", "nc", "netcat",
+
+  # Path Traversal
+  "../", "..\\", "/etc/passwd", "c:\\windows",
+  "/proc/self", "/bin/", "/usr/bin/",
+
+  # NoSQL Injection
+  "$ne", "$gt", "$lt", "$gte", "$lte", "$or", "$and",
+  "$where", "$regex"
+]
+
+    if input and banned_words not in input:
+        user_input.append(input)
+        return {"user_input": user_input}
+    else:
+        return {"error": "Input contains banned words or is empty."}

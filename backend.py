@@ -31,6 +31,7 @@ print(os.environ.get("OPENAI_API_KEY"))
 
 class User(BaseModel):
     email: str
+    password: str
 
 class input(BaseModel):
     text: str
@@ -156,3 +157,19 @@ def delete_test(test_id: int):
     response = supabase.table("tests").delete().eq("id", test_id).execute()
 
     return {"data": response.data}
+
+# auth route for user login
+@app.post('/login')
+def auth_login(user: User):
+    response = supabase.auth.sign_in_with_password(
+    {
+        "email": user.email,
+        "password": user.password,
+    }
+    )
+    return {"data": response}
+
+
+
+
+    
