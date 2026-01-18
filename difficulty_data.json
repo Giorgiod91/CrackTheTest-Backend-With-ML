@@ -1,0 +1,871 @@
+{
+  "data": [
+    { "question": "Was ist 15 + 27?", "label": "Leicht" },
+    { "question": "Was ergibt 8 × 9?", "label": "Leicht" },
+    { "question": "Was ist 144 ÷ 12?", "label": "Leicht" },
+    {
+      "question": "Welche Zahl fehlt in der Reihe: 2, 4, 6, 8, ...?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist das Gegenteil von 'schnell'?", "label": "Leicht" },
+    { "question": "Wie viele Sekunden hat eine Minute?", "label": "Leicht" },
+    { "question": "Welcher Monat kommt nach Juli?", "label": "Leicht" },
+    {
+      "question": "Was ist die Hauptstadt von Deutschland?",
+      "label": "Leicht"
+    },
+    { "question": "Wie viele Ecken hat ein Rechteck?", "label": "Leicht" },
+    { "question": "Was ist 50% von 200?", "label": "Leicht" },
+    { "question": "Welche Farbe hat ein Stopp-Schild?", "label": "Leicht" },
+    { "question": "Wie viele Stunden hat ein Tag?", "label": "Leicht" },
+    { "question": "Was ist 100 − 37?", "label": "Leicht" },
+    {
+      "question": "Welches Tier legt Eier: Huhn oder Hund?",
+      "label": "Leicht"
+    },
+    {
+      "question": "In welchem Kontinent liegt Deutschland?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist die Summe von 25 und 35?", "label": "Leicht" },
+    { "question": "Wie viele Tage hat eine Woche?", "label": "Leicht" },
+    { "question": "Was ist 7 × 3?", "label": "Leicht" },
+    { "question": "Welche Zahl ist größer: 99 oder 101?", "label": "Leicht" },
+    { "question": "Wie viele Räder hat ein Fahrrad?", "label": "Leicht" },
+    { "question": "Was ist das Produkt von 5 und 6?", "label": "Leicht" },
+    {
+      "question": "Welcher Buchstabe kommt nach M im Alphabet?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 45 + 55?", "label": "Leicht" },
+    {
+      "question": "Wie viele Finger hat ein Mensch an beiden Händen?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist die Hälfte von 80?", "label": "Leicht" },
+    {
+      "question": "Welche Jahreszeit folgt auf den Winter?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 20% von 50?", "label": "Leicht" },
+    { "question": "Wie viele Monate hat ein Jahr?", "label": "Leicht" },
+    { "question": "Was ist 36 ÷ 6?", "label": "Leicht" },
+    { "question": "Welche Form hat ein Kreis?", "label": "Leicht" },
+    { "question": "Was ist 88 − 44?", "label": "Leicht" },
+    { "question": "Wie viele Beine hat eine Spinne?", "label": "Leicht" },
+    { "question": "Was ist die Hauptstadt von Frankreich?", "label": "Leicht" },
+    { "question": "Welcher Wochentag kommt nach Dienstag?", "label": "Leicht" },
+    { "question": "Was ist 11 × 11?", "label": "Leicht" },
+    { "question": "Wie viele Zentimeter sind ein Meter?", "label": "Leicht" },
+    { "question": "Was ist das Gegenteil von 'groß'?", "label": "Leicht" },
+    { "question": "Welche Zahl fehlt: 5, 10, 15, 20, ...?", "label": "Leicht" },
+    { "question": "Was ist 90 + 10?", "label": "Leicht" },
+    { "question": "Wie viele Sekunden sind 2 Minuten?", "label": "Leicht" },
+    { "question": "Was ist 64 ÷ 8?", "label": "Leicht" },
+    { "question": "Welches Tier gibt Milch?", "label": "Leicht" },
+    {
+      "question": "Was ist die kleinste zweistellige Zahl?",
+      "label": "Leicht"
+    },
+    {
+      "question": "Wie viele Wochen hat ein Jahr ungefähr?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 6 × 7?", "label": "Leicht" },
+    {
+      "question": "Welcher Planet ist der Erde am nächsten?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 200 − 75?", "label": "Leicht" },
+    { "question": "Wie viele Ecken hat ein Dreieck?", "label": "Leicht" },
+    { "question": "Was ist 15% von 100?", "label": "Leicht" },
+    {
+      "question": "Welche Sprache wird in Spanien gesprochen?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 4 × 12?", "label": "Leicht" },
+    {
+      "question": "Wie viele Minuten sind eine halbe Stunde?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist die Hauptstadt von Italien?", "label": "Leicht" },
+    { "question": "Welche Zahl kommt nach 19?", "label": "Leicht" },
+    { "question": "Was ist 81 ÷ 9?", "label": "Leicht" },
+    { "question": "Wie viele Augen hat ein Mensch?", "label": "Leicht" },
+    { "question": "Was ist das Doppelte von 25?", "label": "Leicht" },
+    { "question": "Welcher Monat hat die wenigsten Tage?", "label": "Leicht" },
+    { "question": "Was ist 13 + 17?", "label": "Leicht" },
+    {
+      "question": "Wie viele Buchstaben hat das deutsche Alphabet?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 150 ÷ 3?", "label": "Leicht" },
+    {
+      "question": "Welche Farbe entsteht aus Rot und Gelb?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 9 × 8?", "label": "Leicht" },
+    { "question": "Wie viele Tage hat der April?", "label": "Leicht" },
+    { "question": "Was ist 70 − 28?", "label": "Leicht" },
+    { "question": "Welches Tier bellt?", "label": "Leicht" },
+    { "question": "Was ist ein Drittel von 99?", "label": "Leicht" },
+    {
+      "question": "Wie viele Kontinente gibt es auf der Erde?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 16 × 2?", "label": "Leicht" },
+    { "question": "Welcher Wochentag kommt vor Montag?", "label": "Leicht" },
+    { "question": "Was ist 55 + 45?", "label": "Leicht" },
+    { "question": "Wie viele Seiten hat ein Quadrat?", "label": "Leicht" },
+    { "question": "Was ist 120 ÷ 4?", "label": "Leicht" },
+    {
+      "question": "Welche Jahreszeit kommt nach dem Herbst?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 18 + 22?", "label": "Leicht" },
+    {
+      "question": "Wie viele Spieler sind in einer Fußballmannschaft auf dem Feld?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 10% von 200?", "label": "Leicht" },
+    { "question": "Welches ist das größte Säugetier?", "label": "Leicht" },
+    { "question": "Was ist 77 − 33?", "label": "Leicht" },
+    {
+      "question": "Wie viele Bundesländer hat Deutschland?",
+      "label": "Leicht"
+    },
+
+    {
+      "question": "Ein Auto fährt 120 km in 1,5 Stunden. Welche Durchschnittsgeschwindigkeit hat es?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Wenn 5 Maschinen 5 Teile in 5 Minuten herstellen, wie lange brauchen 100 Maschinen für 100 Teile?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Ein Wasserbecken wird durch zwei Rohre gefüllt: Rohr A in 3h, Rohr B in 6h. Wie lange dauert es zusammen?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre den Unterschied zwischen Korrelation und Kausalität mit einem Beispiel.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Dreisatz und wie wendet man ihn bei proportionalen Aufgaben an?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Prinzip der doppelten Buchführung in der Buchhaltung.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Wie berechnet man die Fläche eines gleichseitigen Dreiecks mit Seitenlänge a?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre den Unterschied zwischen Brutto, Netto und Mehrwertsteuer.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was bedeutet 'Inflationsrate' und wie beeinflusst sie die Kaufkraft?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Funktionsweise eines geschlossenen Wirtschaftskreislaufs.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Wie unterscheiden sich Gewinn und Umsatz in der Betriebswirtschaft?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Aktien und Anleihen?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der Opportunitätskosten mit einem praktischen Beispiel.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was besagt das Ohmsche Gesetz und wie lautet die Formel?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe den Unterschied zwischen erneuerbaren und fossilen Energieträgern.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Wie funktioniert das Prinzip der Photosynthese?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der pH-Wert und was bedeutet er für Säuren und Basen?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre den Unterschied zwischen DNS und RNA in der Genetik.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter dem Begriff 'Halbwertszeit' in der Physik?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die drei Newtonschen Gesetze der Mechanik.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen kinetischer und potentieller Energie?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der Dichte und ihre Einheit.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Wie unterscheiden sich Mitose und Meiose bei der Zellteilung?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen einem Virus und einem Bakterium?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Prinzip der natürlichen Selektion nach Darwin.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter dem Begriff 'ökologischer Fußabdruck'?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Funktionsweise des menschlichen Blutkreislaufs.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was sind die Hauptursachen des Klimawandels?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre den Unterschied zwischen Demokratie und Diktatur.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was besagt das Grundgesetz über die Gewaltenteilung in Deutschland?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Aufgaben und Struktur der Europäischen Union.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Legislative, Exekutive und Judikative?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der sozialen Marktwirtschaft.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Globalisierung' und welche Vor- und Nachteile hat sie?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Ursachen und Folgen der Finanzkrise 2008.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Zentralismus und Föderalismus?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Prinzip der Nachhaltigkeit nach dem Drei-Säulen-Modell.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was sind die Kernaussagen der UN-Menschenrechte?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Funktionsweise der Bundestagswahl in Deutschland.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen direkter und repräsentativer Demokratie?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der Tarifautonomie im deutschen Arbeitsrecht.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Qualitätsmanagement' in Unternehmen?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Phasen des Projektmanagements.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Effektivität und Effizienz?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Eisenhower-Prinzip zur Priorisierung von Aufgaben.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was sind die Grundprinzipien der agilen Softwareentwicklung?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die SWOT-Analyse und ihre Anwendung.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Marketing und Werbung?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der 4Ps im Marketing-Mix.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Corporate Social Responsibility'?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Maslow'sche Bedürfnispyramide.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen intrinsischer und extrinsischer Motivation?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Prinzip der Gruppendynamik nach Tuckman.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was sind die Merkmale transformationaler Führung?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe den Unterschied zwischen analoger und digitaler Signalübertragung.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Client-Server und Peer-to-Peer Architektur?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das OSI-Schichtenmodell der Netzwerkkommunikation.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Cloud Computing' und welche Servicemodelle gibt es?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Prinzip der objektorientierten Programmierung.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Compiler und Interpreter?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der Normalisierung in relationalen Datenbanken.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was sind die Vor- und Nachteile von NoSQL-Datenbanken gegenüber SQL?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Prinzip der Versionskontrolle mit Git.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen statischem und dynamischem Typsystem?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der Komplexitätsklassen P und NP.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Machine Learning' und wie unterscheidet es sich von KI?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe den Unterschied zwischen supervised und unsupervised Learning.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Klassifikation und Regression?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Bias-Variance-Tradeoff Problem im maschinellen Lernen.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was sind neuronale Netze und wie funktionieren sie grundlegend?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Konzept des Overfitting und wie man es vermeidet.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist Cross-Validation und warum ist sie wichtig?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre den Unterschied zwischen Precision und Recall.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Feature Engineering' im Data Science?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Prinzip der Gradient Descent Optimierung.",
+      "label": "Schwer"
+    },
+    { "question": "Was ist 23 + 19?", "label": "Leicht" },
+    { "question": "Was ergibt 12 × 4?", "label": "Leicht" },
+    { "question": "Was ist 96 ÷ 8?", "label": "Leicht" },
+    {
+      "question": "Welche Zahl fehlt: 10, 20, 30, 40, ...?",
+      "label": "Leicht"
+    },
+    {
+      "question": "Wie viele Millimeter sind ein Zentimeter?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist das Gegenteil von 'heiß'?", "label": "Leicht" },
+    {
+      "question": "Welche Himmelsrichtung ist das Gegenteil von Norden?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 75 + 25?", "label": "Leicht" },
+    { "question": "Wie viele Kontinente gibt es?", "label": "Leicht" },
+    { "question": "Was ist 14 × 5?", "label": "Leicht" },
+    { "question": "Welches Jahr kommt nach 2025?", "label": "Leicht" },
+    { "question": "Was ist 85 − 42?", "label": "Leicht" },
+    { "question": "Wie viele Ohren hat ein Mensch?", "label": "Leicht" },
+    { "question": "Was ist 25% von 80?", "label": "Leicht" },
+    {
+      "question": "Welche Farbe entsteht aus Blau und Gelb?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 17 + 33?", "label": "Leicht" },
+    { "question": "Wie viele Gramm sind ein Kilogramm?", "label": "Leicht" },
+    { "question": "Was ist 72 ÷ 9?", "label": "Leicht" },
+    {
+      "question": "Welches Organ pumpt Blut durch den Körper?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 60 − 15?", "label": "Leicht" },
+    { "question": "Wie viele Zehen hat ein Mensch?", "label": "Leicht" },
+    { "question": "Was ist die Hauptstadt von Österreich?", "label": "Leicht" },
+    { "question": "Was ist 9 × 9?", "label": "Leicht" },
+    { "question": "Welcher Tag kommt nach Donnerstag?", "label": "Leicht" },
+    { "question": "Was ist 35 + 65?", "label": "Leicht" },
+    { "question": "Wie viele Ecken hat ein Fünfeck?", "label": "Leicht" },
+    { "question": "Was ist 48 ÷ 6?", "label": "Leicht" },
+    { "question": "Welches Tier miaut?", "label": "Leicht" },
+    { "question": "Was ist 80 − 35?", "label": "Leicht" },
+    { "question": "Wie viele Minuten hat eine Stunde?", "label": "Leicht" },
+    { "question": "Was ist 13 × 3?", "label": "Leicht" },
+    {
+      "question": "Welche Jahreszeit kommt nach dem Frühling?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 44 + 56?", "label": "Leicht" },
+    {
+      "question": "Wie viele Liter sind ein Kubikmeter Wasser?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 54 ÷ 6?", "label": "Leicht" },
+    { "question": "Was ist die Hauptstadt der Schweiz?", "label": "Leicht" },
+    { "question": "Was ist 19 + 21?", "label": "Leicht" },
+    { "question": "Wie viele Seiten hat ein Oktagon?", "label": "Leicht" },
+    { "question": "Was ist 15 × 4?", "label": "Leicht" },
+    {
+      "question": "Welcher Monat hat 31 Tage: Februar oder März?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 91 − 28?", "label": "Leicht" },
+    { "question": "Wie viele Beine hat ein Insekt?", "label": "Leicht" },
+    { "question": "Was ist 30% von 200?", "label": "Leicht" },
+    {
+      "question": "Welches Tier schwimmt im Wasser und hat Kiemen?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 27 + 23?", "label": "Leicht" },
+    { "question": "Wie viele Stunden sind zwei Tage?", "label": "Leicht" },
+    { "question": "Was ist 11 × 9?", "label": "Leicht" },
+    { "question": "Welche Farbe hat ein Bananenblatt?", "label": "Leicht" },
+    { "question": "Was ist 72 − 18?", "label": "Leicht" },
+    { "question": "Wie viele Nullen hat die Zahl 1000?", "label": "Leicht" },
+    { "question": "Was ist 18 × 3?", "label": "Leicht" },
+    { "question": "Welcher Kontinent ist der größte?", "label": "Leicht" },
+    { "question": "Was ist 66 ÷ 11?", "label": "Leicht" },
+    {
+      "question": "Wie viele Tage hat der Februar in einem Schaltjahr?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 38 + 42?", "label": "Leicht" },
+    { "question": "Welches Gas atmen wir ein?", "label": "Leicht" },
+    { "question": "Was ist 95 − 47?", "label": "Leicht" },
+    { "question": "Wie viele Meter sind ein Kilometer?", "label": "Leicht" },
+    { "question": "Was ist 14 × 7?", "label": "Leicht" },
+    {
+      "question": "Welches Metall ist bei Raumtemperatur flüssig?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 56 + 44?", "label": "Leicht" },
+    { "question": "Wie viele Sekunden sind in 5 Minuten?", "label": "Leicht" },
+    { "question": "Was ist 99 ÷ 9?", "label": "Leicht" },
+    {
+      "question": "Welche Form hat eine Pizza normalerweise?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 67 − 29?", "label": "Leicht" },
+    {
+      "question": "Wie viele Buchstaben hat das Wort 'Deutschland'?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 16 × 6?", "label": "Leicht" },
+    {
+      "question": "Welches Tier legt Eier und kann nicht fliegen: Pinguin oder Adler?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 82 + 18?", "label": "Leicht" },
+    {
+      "question": "Wie viele Wochen sind ungefähr ein Monat?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 84 ÷ 7?", "label": "Leicht" },
+    {
+      "question": "Welche Farbe hat der Himmel an einem klaren Tag?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 53 + 47?", "label": "Leicht" },
+    {
+      "question": "Wie viele Zähne hat ein erwachsener Mensch normalerweise?",
+      "label": "Leicht"
+    },
+    { "question": "Was ist 13 × 8?", "label": "Leicht" },
+    { "question": "Welches ist das größte Tier der Welt?", "label": "Leicht" },
+    { "question": "Was ist 88 − 34?", "label": "Leicht" },
+    { "question": "Wie viele Monate haben 30 Tage?", "label": "Leicht" },
+
+    {
+      "question": "Ein Zug fährt 240 km in 2 Stunden. Wie weit kommt er in 45 Minuten?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Wenn ein Produkt um 20% reduziert wird und danach 80€ kostet, wie viel kostete es vorher?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre den Unterschied zwischen absoluten und relativen Zahlen in der Statistik.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Median und wie unterscheidet er sich vom Durchschnitt?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Pareto-Prinzip und seine Anwendung im Management.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Liquidität' in der Finanzwirtschaft?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre den Unterschied zwischen fixen und variablen Kosten.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist die Break-Even-Analyse und wofür wird sie verwendet?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Funktionsweise einer Bilanz in der Buchhaltung.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen direkten und indirekten Steuern?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der Abschreibung im Rechnungswesen.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Working Capital' in der Betriebswirtschaft?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die verschiedenen Rechtsformen von Unternehmen in Deutschland.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Eigenkapital und Fremdkapital?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der Deckungsbeitragsrechnung.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was sind die Hauptbestandteile einer Gewinn- und Verlustrechnung?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Prinzip der Portfolioanalyse nach BCG.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Supply Chain Management'?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre den Unterschied zwischen B2B und B2C Marketing.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist eine PEST-Analyse und wofür wird sie verwendet?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Porter's Five Forces im strategischen Management.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Lean Management' und seine Prinzipien?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept von Six Sigma in der Qualitätssicherung.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Prozess- und Projektorganisation?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Grundlagen des Arbeitsrechts bezüglich Kündigungsfristen.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Betriebsrat' und welche Rechte hat er?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der Sozialversicherung in Deutschland.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Brutto- und Nettolohn?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Funktionsweise des deutschen Steuersystems.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Progressionsvorbehalt' im Steuerrecht?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre den Unterschied zwischen Eigentum und Besitz im BGB.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist ein Kaufvertrag und welche Pflichten entstehen daraus?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Prinzip der Gewährleistung und Garantie.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Verjährung' im deutschen Recht?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre den Unterschied zwischen Angebot und Einladung zum Angebot.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist eine Bürgschaft und welche Risiken birgt sie?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Grundlagen des Mietrechts in Deutschland.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Betriebskostenabrechnung' bei Mieten?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der Mietminderung und ihre Voraussetzungen.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen TCP und UDP Protokollen?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe die Funktionsweise von Public-Key-Verschlüsselung.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'API' in der Softwareentwicklung?",
+      "label": "Schwer"
+    },
+    { "question": "Erkläre das REST-Prinzip bei Web-APIs.", "label": "Schwer" },
+    {
+      "question": "Was ist der Unterschied zwischen GET und POST HTTP-Methoden?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Prinzip der Dependency Injection.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Design Patterns' in der Softwareentwicklung?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das MVC (Model-View-Controller) Architekturmuster.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen synchroner und asynchroner Programmierung?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Konzept von Microservices-Architektur.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Continuous Integration/Continuous Deployment'?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre den Unterschied zwischen Unit Tests und Integration Tests.",
+      "label": "Schwer"
+    },
+    { "question": "Was ist Test-Driven Development (TDD)?", "label": "Schwer" },
+    {
+      "question": "Beschreibe das Prinzip der Code-Review in der Softwareentwicklung.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Technical Debt' in Softwareprojekten?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der Containerisierung mit Docker.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist Kubernetes und wofür wird es verwendet?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe den Unterschied zwischen SQL JOIN-Typen (INNER, LEFT, RIGHT).",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'ACID' Eigenschaften in Datenbanken?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das CAP-Theorem in verteilten Systemen.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Indexierung und Partitionierung in Datenbanken?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Konzept von Sharding in Datenbanken.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Data Warehousing'?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre den ETL-Prozess (Extract, Transform, Load).",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Data Lake und Data Warehouse?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Konzept von Big Data und die 5 V's.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Reinforcement Learning' in der KI?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept von Transfer Learning im Machine Learning.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen CNN und RNN neuronalen Netzen?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Konzept von Attention-Mechanismen in Deep Learning.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Natural Language Processing' (NLP)?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept von Word Embeddings wie Word2Vec.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Bagging und Boosting?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Prinzip von Random Forests.",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was versteht man unter 'Hyperparameter Tuning' im ML?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Erkläre das Konzept der Regularisierung (L1 und L2).",
+      "label": "Schwer"
+    },
+    {
+      "question": "Was ist der Unterschied zwischen parametrischen und nicht-parametrischen Modellen?",
+      "label": "Schwer"
+    },
+    {
+      "question": "Beschreibe das Konzept der Dimensionsreduktion mit PCA.",
+      "label": "Schwer"
+    }
+  ]
+}

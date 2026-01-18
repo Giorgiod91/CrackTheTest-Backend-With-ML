@@ -1,5 +1,7 @@
 # Since im taking the Andrew Ng Deepl Learning course i try to implement what i learn into this model
 import copy
+import os
+import json
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -7,6 +9,26 @@ from sklearn.model_selection import train_test_split
 from fastapi import FastAPI, Body
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+
+# Optional external dataset path
+DATA_PATH = os.path.join(os.path.dirname(__file__), "difficulty_data.json")
+# loat the json data w
+def load_data_json(path):
+    try:
+        if os.path.exists(path):
+            with open(path, "r", encoding="utf-8") as f:
+                payload = json.load(f)
+            items = payload.get("data", payload)
+            data = [
+                {"question": str(d.get("question", "")).strip(), "label": str(d.get("label", "")).strip()}
+                for d in items
+                if isinstance(d, dict) and d.get("question") and d.get("label")
+            ]
+            if len(data) >= 10:
+                return data
+    except Exception:
+        pass
+    return None
 
 data = [
     # ---------------- Leicht (30) ----------------
@@ -74,6 +96,11 @@ data = [
     {"question": "Was versteht man unter Feature-Engineering und warum ist es wichtig?", "label": "Schwer"},
 ]
 
+# If a JSON dataset exists, use it instead of the hardcoded list
+_loaded = load_data_json(DATA_PATH)
+if _loaded:
+    data = _loaded
+
 
 
 
@@ -82,11 +109,24 @@ texts = [d["question"] for d in data]  # list of strings
 labels = [0 if d["label"] == "Leicht" else 1 for d in data]  
 
 texts_train, texts_test, labels_train, labels_test = train_test_split(
-    texts, labels, test_size=0.2, random_state=42
+    texts, labels, test_size=0.2, random_state=42, stratify=labels
 )
 
 # will convert each question into a vector of numbers
-vectorizer = TfidfVectorizer(ngram_range=(1,2), stop_words='german', max_features=3000)
+# Minimal German stop words list (lowercase) for vectorization the default only knows English
+GERMAN_STOP_WORDS = [
+    "der", "die", "das", "ein", "eine", "einer", "eines", "einem", "einen",
+    "und", "oder", "aber", "denn", "weil", "dass", "als", "wie",
+    "auf", "für", "mit", "von", "zu", "im", "in", "am", "an", "aus", "bei", "nach", "über", "unter", "zwischen", "vor", "hinter", "ohne", "durch", "gegen", "seit", "bis",
+    "ist", "sind", "war", "waren", "sein", "bin", "bist", "wird", "werden", "wurden",
+    "nicht", "kein", "keine", "nur", "auch", "noch", "schon", "sehr", "mehr", "weniger",
+    "man", "wir", "ihr", "sie", "er", "es", "ich", "du",
+    "mein", "meine", "dein", "deine", "sein", "seine", "ihr", "ihre",
+    "dies", "diese", "dieser", "dieses", "jener", "jene", "jenes",
+    "zum", "zur", "vom", "beim", "ins", "dem", "den", "des"
+]
+
+vectorizer = TfidfVectorizer(ngram_range=(1,2), stop_words=GERMAN_STOP_WORDS, max_features=800)
 
 # and here X_mat has the shape of (n,m)  = in this case we habe (6 samples, N features (words))
 X_train_mat = vectorizer.fit_transform(texts_train).toarray()  # (m_train, n)
@@ -188,7 +228,7 @@ def predict(w,b,X):
 # train
 w0,b0 = initalize_with_zeros(X_train.shape[0])
 
-params, grad, costs = optimize(w0, b0,X_train,Y_train, num_iterations=1200, learning_rate=0.8, print_cost=True)
+params, grad, costs = optimize(w0, b0,X_train,Y_train, num_iterations=5000, learning_rate=0.005, print_cost=True)
 # desctructe the values i need
 w,b = params["w"], params["b"]
 
@@ -205,6 +245,7 @@ questions_to_predict =[
     "was ist 5 + 12 ?",
     "Wie Lange braucht das Licht von der Sonne zur Erde ?",
     "Erkläre das Prinzip der Gravitation"
+    
 
 ]
 
@@ -231,87 +272,3 @@ plt.xlabel("Iterations (x100)")
 plt.ylabel("Cost")
 plt.show()
 
-
-# need to safe the Model somehow to reuse it in the backend part with the frontend input data
-# for now trying to build an API right here
-# another route here for my ML model
-app = FastAPI()
-
-#:TODO: fix the Routi9ng with middleware and cors and so on 
-
-
-
-# BaseModel for uner input 
-
-class User_Input(BaseModel):
-    test:str
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Frontend-URL
-    allow_credentials=True,
-    allow_methods=["*"],   # erlaubt GET, POST, PUT, DELETE usw.
-    allow_headers=["*"],   # erlaubt alle Header
-)
-
-# predited outcome label we send back to the frontend
-model_label = {0:"Leicht", 1: "Schwer"}
-
-@app.post("/predict-difficulty")
-def predict_user_input(data: input,w,b):
-    user_input = data.text 
-
-
-    # need to  Vectorize the input 
-    vectorized_user_input= vectorizer.transform(user_input).toarray().T
-    predicted_difficulty = predict(w,b,vectorized_user_input)
-    # taking this from above
-    for q, pred in zip(questions_to_predict, predicts.flatten()):
-        if pred == 0:
-            print(q, "Leicht")
-    else:
-        print(q, "Schwer")
-
-    return {"predicted difficulty with machnine learning Model": predicted_difficulty}
-    
-
-# route to get user input and check for banned wwords and to use the data for my model to learn from it
-@app.get("/send-user-input")
-def get_user_input(input: str):
-    user_input = []
-    banned_words = [
-  # SQL Injection
-  "select", "insert", "update", "delete", "drop", "truncate",
-  "union", "where", "having", "order by", "group by",
-  "or 1=1", "and 1=1", "--", ";--", "/*", "*/", "@@",
-  "char(", "nchar(", "varchar(", "nvarchar(",
-  "cast(", "convert(", "exec", "execute",
-  "information_schema", "table_name", "column_name",
-  "xp_cmdshell", "sp_executesql",
-
-  # XSS (Cross-Site Scripting)
-  "<script", "</script>", "javascript:",
-  "onerror=", "onload=", "onclick=",
-  "alert(", "prompt(", "confirm(",
-  "document.cookie", "document.write",
-  "<iframe", "<img", "<svg",
-
-  # Command Injection
-  "&&", "||", "|", "`", "$(",
-  "cmd.exe", "powershell", "bash", "sh",
-  "wget", "curl", "nc", "netcat",
-
-  # Path Traversal
-  "../", "..\\", "/etc/passwd", "c:\\windows",
-  "/proc/self", "/bin/", "/usr/bin/",
-
-  # NoSQL Injection
-  "$ne", "$gt", "$lt", "$gte", "$lte", "$or", "$and",
-  "$where", "$regex"
-]
-
-    if input and banned_words not in input:
-        user_input.append(input)
-        return {"user_input": user_input}
-    else:
-        return {"error": "Input contains banned words or is empty."}

@@ -10,10 +10,11 @@ from openai import OpenAI
 
 
 
-
-
 load_dotenv()
 app = FastAPI()
+
+
+
 
 
 
