@@ -5,7 +5,7 @@ from fastapi import FastAPI, Body
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from werkzeug.security import generate_password_hash ,check_password_hash
-
+from predict_service import DifficultyPredictor
 from openai import OpenAI
 
 
@@ -13,8 +13,8 @@ from openai import OpenAI
 load_dotenv()
 app = FastAPI()
 
-
-
+# import the model
+difficulty_predictor = DifficultyPredictor()
 
 
 
@@ -95,12 +95,10 @@ def premium_users():
     return f'Welcome to the Premium Section! <a href="https://youtube.com{myChannel}"> Show Video Guide </a>'
 # another route here for my ML model
 @app.post("/predict-difficulty")
-def predict(data: input):
-    user_input = data.text
-    predicted_difficulty = My_Model.predict()
-
-    return {"predicted difficulty with machnine learning Model": predicted_difficulty}
-
+async def predict_difficulty(data: dict = Body(...)):
+    question = data.get("question", "")
+    result = difficulty_predictor.predict(question)
+    return result
 
 # hash user password with data (user_input_pw) from the frontend validation check will be in the frontend
 def create_hash_pw(user_input_pw):

@@ -2,6 +2,7 @@
 import copy
 import os
 import json
+import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -272,3 +273,17 @@ plt.xlabel("Iterations (x100)")
 plt.ylabel("Cost")
 plt.show()
 
+# Model speichern
+MODEL_DIR = os.path.join(os.path.dirname(__file__), "model_artifacts")
+os.makedirs(MODEL_DIR, exist_ok=True)
+
+model_artifacts = {
+    "w": w,
+    "b": b,
+    "vectorizer": vectorizer
+}
+
+with open(os.path.join(MODEL_DIR, "difficulty_model.pkl"), "wb") as f:
+    pickle.dump(model_artifacts, f)
+
+print("Model saved to model_artifacts/difficulty_model.pkl")
